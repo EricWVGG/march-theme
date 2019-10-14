@@ -1,0 +1,17 @@
+#featured {}
+
+#featured li {
+  width:316px;
+  margin-bottom:6px;
+  opacity:0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+          transition: opacity 0.5s ease-in-out;
+}
+
+#featured li.loaded {
+  opacity:1;
+}
+
+html.no-touch #featured li.loaded:hover {
+  opacity:0.25;
+}

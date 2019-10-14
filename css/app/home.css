@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+/***********/
+/* HEADER */
+/*********/
+
+/* /// ALL /// */
+
+/* Section */
+
+section.home {
+    width:100%;
+    height:100%;
+}
+
+/* BG Image */
+
+section.bg_image_home {
+    background:center center no-repeat;
+    background-size:cover !important;
+}
+
+/* Overlay */
+
+section.home article {
+    position:fixed;
+    z-index:1;
+    top:0;
+    left:0;
+    background:rgba(27,9,18,0.9);
+    width:100%;
+    height:100%;
+    opacity:0;
+    pointer-events:none;
+    -webkit-transition:opacity 0.6s ease-in-out;
+    	    transition:opacity 0.6s ease-in-out;
+}
+
+section.home article.display_text {
+    opacity:1;
+    pointer-events:all;
+}
+
+section.home article span {
+    display:block;
+    position:absolute;
+    top:0; bottom:0; left:0; right:0;
+    height:220px;
+    width:960px;
+    margin:auto;
+}
+
+section.home article span p {
+    max-width:650px;
+    margin-top:-10px;
+    /* Text */
+    font-weight:200 !important;
+    font-size:78px;    
+    line-height:78px;
+    color:rgb(221,219,215);
+}
+
+/* ////////////////////////////////////////////////////////////////////// */
+
+/* RESPONSIVE ADJUSTMENTS */
+
+/* ////////////////////////////////////////////////////////////////////// */
+
+@media only screen 
+and (max-width : 1132px) {
+
+    /* Overlay */
+    
+    section.home article span {
+        height:220px;
+        padding:0 60px;
+        margin:auto 0;
+    }
+    
+}
+
+@media only screen 
+and (max-width : 747px) {
+
+    /* Section */
+    
+    body.home {
+        position:fixed;
+        overflow:hidden;
+    }
+
+    /* Overlay */
+    
+    section.home article span {
+        position:relative;
+        height:100%;
+        width:100%;
+        padding:130px 20px;
+        margin:auto 0;
+        overflow:auto;
+        -webkit-overflow-scrolling:touch;
+    }
+    
+    section.home article span p {
+        font-size:52px;
+        line-height:58px;
+    }
+    
+}

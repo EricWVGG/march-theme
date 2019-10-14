@@ -1,0 +1,343 @@
+/* “interior” (non-home) page layout */
+
+/* Section - Main */
+
+section#main_section {
+    position:relative;
+    width:960px;
+    margin:160px auto auto auto;
+    padding-bottom:80px;
+}
+
+/* Article - Page */
+
+article.page {
+    max-width:638px;
+    margin-bottom:60px;
+}
+
+article.page p,
+article.page h2 {
+    font-size:19px;
+    line-height:28px;
+}
+
+article.page p {color:rgb(221,219,215);}
+
+article.page h2 {
+    font-weight:400 !important;
+    float:left;
+    color:rgb(254,254,254);
+}
+
+/* Article - Featured */
+
+article#featured {
+  margin-bottom:60px;
+  margin-left:-18px;
+}
+
+article#featured img {
+  max-width:320px;
+  height:auto;
+}
+
+@media only screen and (min-width:480px) {
+  article#featured {
+    margin-left:0px;
+  }
+  article#featured img {
+    max-width:9999px;
+    height:auto;
+  }
+}
+
+
+/* Article - Clients */
+
+article#clients {
+    position:relative;
+    padding-top:40px;
+    border-top:1px solid rgb(89,69,82);
+    min-height:1000px;
+}
+    #clients_scroll_target,
+    #case_studies_scroll_target {
+      position:absolute;
+      margin-top:-145px;
+    }
+
+article#clients h2,
+article#case_studies h2 {
+    font-weight:400 !important;
+    font-size:19px;
+    line-height:28px;
+    color:rgb(221,219,215);
+    margin-bottom:1em;
+}
+
+article#clients ul {
+    line-height:1.3em;
+    -webkit-columns:260px 3;
+       -moz-columns:260px 3;
+            columns:260px 3;
+}
+
+article#clients ul li {
+    color:rgb(119,99,112);
+    margin-bottom:12px;
+    -webkit-transition:color 0.2s ease-in-out;
+    	    transition:color 0.2s ease-in-out;
+}
+
+article#clients ul li.selected {color:rgb(221,219,215);}
+
+/* Case Studies */
+
+.case_study_intro h2,
+.case_study_intro p:first-of-type {
+    font-size:1.3em;
+    line-height:1.5em;
+}
+
+.case_study_intro p {
+    margin-bottom:1em;
+}
+
+#case_study p {
+    margin:1em 0;
+    color:rgb(119,99,112);
+}
+
+#case_study img {
+    max-width:100%;
+    height:auto;
+    margin:0 !important;
+}
+
+
+
+/* Article - About Section */
+
+article.article_profile h2,
+article.article_profile p,
+article.article_news h2,
+article.article_news p,
+article.article_contact h2,
+article.article_contact p {
+    float:none;
+    color:rgb(221,219,215);
+}
+
+article.article_profile h2,
+article.article_news h2,
+article.article_contact h2 {
+    font-size:19px;
+    line-height:28px;
+}
+
+article.article_profile p,
+article.article_news p,
+article.article_contact p  {
+    font-size:15px;
+    line-height:22px;
+}
+
+/* Profile */
+
+article.article_profile h2,
+article.article_profile p {
+    float:none;
+    max-width:640px;
+    margin-bottom:30px;
+}
+
+article.article_profile img.profile_image {margin-bottom:15px;}
+
+/* Case Studies */
+
+article#case_studies {
+    position:relative;
+    padding-top:40px;
+    border-top:1px solid rgb(89,69,82);
+    margin-bottom:80px;
+}
+
+.case_studies .unit {
+    display:block;
+    position:relative;
+    min-height:300px;
+    text-decoration:none;
+}
+.case_studies .unit div {
+    box-sizing:border-box;
+    position:absolute;
+    z-index:2;
+    height:100%;
+    padding:60px 40px;
+}
+.case_studies .unit::after {
+    content: "";
+    display:block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width:100%;
+    height:100%;
+    position: absolute;
+    background-color:rgba(22,3,8,0.8);
+    z-index: 1;
+    -webkit-transition:background-color 0.2s ease-in-out;
+            transition:background-color 0.2s ease-in-out;
+}
+
+.case_studies .unit:hover::after {
+    background-color:rgba(22,3,8,0);
+}
+
+.case_studies h3 {
+    font-size:7rem;
+    font-weight:200;
+    font-family:'aktiv-grotesk-std', sans-serif;
+}
+
+.case_studies p { display:none; }
+
+.case_studies span {
+    position:absolute;
+    bottom:40px;
+    left:40px;
+}
+
+/* News */
+
+article.article_news {
+    max-width:670px;
+    padding-bottom:30px;
+    border-bottom:1px solid rgb(62,44,53);
+    margin-bottom:35px;
+}
+
+article.article_news:last-of-type {
+    border-bottom:none;
+    margin-bottom:0;
+}
+
+article.article_news h2,
+article.article_news p {margin-bottom:10px;}
+
+article.article_news h2 a {text-decoration:none;}
+
+article.article_news h3 {
+    font-weight:400 !important;
+    font-size:11px;
+    line-height:11px;
+    margin-bottom:25px;
+}
+
+article.article_news h3 span.date_posted {
+    color:rgb(129,109,122);
+    padding-right:10px;
+}
+
+/* Contact */
+
+article.article_contact {
+    float:left;
+    width:316px;
+    margin-right:10px;
+}
+
+article.article_contact h2,
+article.article_contact p {
+    max-width:640px;
+    margin-bottom:30px;
+}
+
+/* Aside - Contact */
+
+aside.aside_contact {
+    float:left;
+    width:610px;
+}
+
+aside.aside_contact div.contact_map {
+    position:relative;
+    background:center center no-repeat;
+    background-size:100% !important;
+    width:100%;
+    height:100%;
+}
+
+div.contact_map img {
+    max-width:100%;
+    height:auto;
+}
+
+/* ////////////////////////////////////////////////////////////////////// */
+
+/* RESPONSIVE ADJUSTMENTS */
+
+/* ////////////////////////////////////////////////////////////////////// */
+
+@media only screen 
+and (max-width : 1132px) {
+
+    /* Section - Main */
+
+    section#main_section {
+        width:640px;
+        margin:165px auto 200px auto;
+        padding:0;
+    }
+
+    aside.aside_contact {
+        float:left;
+        width:310px;
+    }
+
+}
+
+article#about_clients {display:none;}
+
+@media only screen 
+and (max-width : 747px) {
+
+    /* Section - Main */
+
+    section#main_section {
+      padding:0px 20px;
+      width:100%;
+      margin:110px 0px;
+    }
+    
+    /* Article - Contact */
+
+    article.article_contact {
+        float:none;
+        clear:both;
+        max-width:100%;
+        margin-right:0;
+    }
+    
+    /* Aside - Contact */
+
+    aside.aside_contact {
+        float:left;
+    }
+    
+    article#clients {display:none;}
+    
+    article#about_clients {display:block;}
+    
+    article#about_clients ul {
+        font-size:1rem;
+        -webkit-column-count:2;
+        column-count:2;
+        -webkit-column-gap:20px;
+        column-gap:20px;
+    }
+
+
+}
